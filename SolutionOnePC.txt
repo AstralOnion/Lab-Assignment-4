@@ -1,0 +1,28 @@
+Creating: Dungeon and Dragons 5th Edition HP Calculator
+- Can only use Arrays, Lists, and Dictionaries
+User declares inputs from the inspector
+
+User inputs
+- Character Name
+- level
+- CON(stitution) score
+- race
+- Tough/Stout (bool?)
+- averages or rolled
+	then spits out HP value
+
+My character ______ is a level ____ _______ with a CON score of _____ and is of ____ race and has/not Tough/Stout feat. I want the HP averaged/rolled.
+
+My character characterName (string) is a level levelNum (integer) charClass (string) with a CON score of conNum (integer) and is of charRace (string) race and has/not Tough/Stout feat. I want the HP averaged/rolled.
+
+Hp is calculated by 
+level 1 = hit dice total value + constitution modifier + (2 * (if tough bool = true then 1, if false 0) + (1 * if stout bool = true then 1, if false 0)
+each level after 
+	average = level1value + (dice roll averaged value (float for .5 values) * level - 1 (to match # of dice)) + conModifier * level-1
+	rolled = level1value + (roll class's hit dice # of times equal to level - 1 (to match # of dice)) + conModifier * level-1
+
+toughText = has the Tough feat
+toughText = does not have the Tough feat
+
+stoutText = and has the Stout feat
+stoutText = and does not have the Stout feat
